@@ -1,0 +1,61 @@
+<title>Welcome Page</title>
+<style type="text/css">
+		ul {
+		list-style-type: none;
+		}
+	  .list-cust .list-group-item:first-child {
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+
+    .list-cust .list-group-item:last-child {
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .list-cust .list-group-item {
+       border-right:0px;
+       border-left:0px;
+    }
+    .list-group :not(:first-child) {
+        background-color: #EEE;
+        
+    }
+</style>
+ <div ng-controller="userCtrl" class="container">
+  <h3> Welcome {{ user }}! </h3>
+ </div>
+
+<div class="container" ng-controller="listEmp">
+	
+		<h2>Employees </h2>
+		<h5>Select an ID to view the profile card</h5>
+        <div class="row">
+    <div class="col-md-6  col-xs-6">
+        <div class="list-group list-cust">
+            <p class="list-group-item active">
+                ID
+            </p>
+            <ul ng-repeat="item in items">
+            <a ng-click="third(item)" class="list-group-item text-primary" style="cursor: pointer;"><li>{{item.id}}</li></a>
+            </ul>
+        </div>
+    </div>
+	    <div class="col-md-6 col-xs-6">
+        <div class="list-group list-cust">
+            <p class="list-group-item active">
+                Name
+            </p>
+            <ul ng-repeat="item in items">
+            <a class="list-group-item text-primary"><li>{{item.name}}</li></a>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-4" style="padding:0px">
+
+    </div>
+    <div class="col-md-4" style="padding:0px">
+
+    </div>
+</div>
+	
+</div>
